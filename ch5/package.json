@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "nodemon -e js,json,graphql"
   },
@@ -13,6 +13,7 @@
   "dependencies": {
     "apollo-server": "^3.4.0",
     "graphql": "^16.0.1",
+    "graphql-import": "^1.0.2",
     "nodemon": "^2.0.14"
   },
   "devDependencies": {

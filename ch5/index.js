@@ -1,22 +1,7 @@
 import { ApolloServer } from "apollo-server";
+import { importSchema } from "graphql-import";
 
-const typeDefs = `
-type Photo{
-  id: ID!
-  url: String!
-  name: String!
-  description: String
-}
-
-type Query {
-  totalPhotos: Int!
-  allPhotos: [Photo!]!
-}
-
-type Mutation {
-  postPhoto(name: String! description: String): Photo!
-}
-`;
+const typeDefs = importSchema("./schema.graphql");
 
 let _id = 0;
 const photos = [];
